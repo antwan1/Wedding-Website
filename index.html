@@ -6,11 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
+       <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+       
         <style>
             body,
-            h1,
+            h1 {
+            
+            
+            }
             h2 {
                 font-family: "Raleway", sans-serif
+        
             }
 
             body,
@@ -30,40 +39,95 @@
             }
 
             .bgimg {
-                background-image: url("https://www.w3schools.com/w3images/wedding_couple.jpg")
+                background-image: url("./images/proposal.jpg");
+                  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                 filter: grayscale(92%);
+
+                
+
+
+                
+
+            }
+            .bgimg: hover {
+                       -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+
             }
 
             .bgimg2 {
                 background-image: url("https://www.w3schools.com/w3images/flowers.jpg")
             }
+            .w3-jumbo{
+            color: White;
+            font-weight:bold;
+            font-size: 9px;
+            font-family:  "Sofia", sans-serif;
+
+            }
+            
+            
+           
         </style>
+
+        <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 4, 2024 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
     </head>
 <body>
+    
 
     <!-- Header / Home-->
-    <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+    <header class="w3-display-container  w3-wide bgimg w3-grayscale-min" id="home">
         <div class="w3-display-middle w3-text-white w3-center">
-            <h1 class="w3-jumbo">Jane & John</h1>
-            <h2>Are getting married</h2>
-            <h2><b>17.07.2017</b></h2>
+            <h1 class="w3-jumbo">Antonio <br> & <br> Palla</h1>
+            <h2 = class="second-jumbo">Are getting married</h2>
+            <h2 id="demo"></h2>
         </div>
     </header>
 
     <!-- Navbar (sticky bottom) -->
-    <div class="w3-bottom w3-hide-small">
+    <div class="w3-bottom w3-hide-small ">
         <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
             <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
-            <a href="#us" style="width:25%" class="w3-bar-item w3-button">Jane & John</a>
+            <a href="#us" style="width:25%" class="w3-bar-item w3-button">Antonio & Palla</a>
             <a href="#wedding" style="width:25%" class="w3-bar-item w3-button">Wedding</a>
             <a href="#rsvp" style="width:25%" class="w3-bar-item w3-button w3-hover-black">RSVP</a>
         </div>
     </div>
 
-    <!-- About / Jane And John -->
-    <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
+ 
+    <div class="w3-container  w3-padding-64 w3-sand " id="us">
         <div class="w3-content">
-            <h1 class="w3-center w3-text-grey"><b>Jane & John</b></h1>
-            <img class="w3-round w3-grayscale-min" src="https://www.w3schools.com/w3images/wedding_couple2.jpg" style="width:100%;margin:32px 0">
+            <h1 class="w3-center w3-text-grey"><b>Antonio & Palla</b></h1>
+            <img class="w3-round w3-hover-grayscale " src="./images/roka2_1_600x400.jpg" style=" width: 100%">
             <p><i>You all know us. And we all know you. We are getting married lorem ipsum dolor sit amet, consectetur
                     adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur
@@ -107,12 +171,12 @@
     </div>
 
     <!-- RSVP section -->
-    <div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
+    <div class="w3-container w3-padding-64 w3-sand w3-center w3-wide" id="rsvp">
         <h1>HOPE YOU CAN MAKE IT!</h1>
         <p class="w3-large">Kindly Respond By January, 2017</p>
         <p class="w3-xlarge">
             <button onclick="document.getElementById('id01').style.display='block'"
-                class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+                class="w3-button w3-round w3-win8-crimson w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
         </p>
     </div>
 
@@ -125,7 +189,7 @@
                 <form>
                     <input class="w3-input w3-border" type="text" placeholder="Name(s)" name="name">
                 </form>
-                <p><i>Sincerely, John & Jane</i></p>
+                <p><i>Sincerely, Antonio & Palla</i></p>
                 <div class="w3-row">
                     <div class="w3-half">
                         <button onclick="document.getElementById('id01').style.display='none'" type="button"
@@ -148,6 +212,8 @@
   </footer>
   
     <div class="w3-hide-small" style="margin-bottom:32px"> </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 
